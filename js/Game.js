@@ -82,8 +82,7 @@ class Game {
               }
         
             }
-        console.log(displayHeight)
-        console.log(  player.distance  )
+       
             if(player.distance < 3700){
               if(keyIsDown(38) && player.index !== null){
                   yVel += 0.9;
