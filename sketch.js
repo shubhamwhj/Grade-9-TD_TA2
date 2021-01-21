@@ -1,5 +1,6 @@
 var canvas, backgroundImage;
-
+var button;
+var locY;
 var gameState = 0,finishedPlayers;
 var playerCount;
 var allPlayers;
@@ -22,6 +23,7 @@ function preload(){
   bronze_img = loadImage("images/bronze.png");
   silver_img = loadImage("images/silver.png");
   gold_img = loadImage("images/gold.png");
+  
 }
 
 function setup(){
@@ -37,13 +39,16 @@ function setup(){
   game = new Game();
   game.getState();
   game.start();
+  button=createSprite(width-100,height-100);
+  button.color="red";
 }
 
 
 function draw(){
    //start the game
    background(200, 200, 255);
-
+  console.log(locY);
+   button.y=locY;
    //start the game
  
   //start the game

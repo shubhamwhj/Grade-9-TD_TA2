@@ -76,7 +76,9 @@ class Game {
                 if (index === player.index){
                   cars[index - 1].shapeColor = "red";
                   camera.position.x = displayWidth/2;
-                  camera.position.y = cars[index-1].y
+                  camera.position.y = cars[index-1].y;
+                  locY=cars[index-1].y;
+                  
                 }
                
               }
@@ -84,7 +86,7 @@ class Game {
             }
        
             if(player.distance < 3700){
-              if(keyIsDown(38) && player.index !== null){
+              if(mousePressedOver(button) && player.index !== null){
                   yVel += 0.9;
                   if(keyIsDown(37)){
                       xVel -= 0.2;

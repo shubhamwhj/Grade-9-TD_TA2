@@ -6,7 +6,7 @@ class Form {
     this.greeting = createElement('h2');
     this.title = createElement('h2');
     this.reset = createButton('Reset');
-
+    this.forward = createButton('Forward');
   }
   hide(){
     this.greeting.hide();
